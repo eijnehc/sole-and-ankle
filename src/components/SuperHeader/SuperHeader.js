@@ -6,6 +6,7 @@ import { COLORS } from '../../constants';
 import SearchInput from '../SearchInput';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
+import Spacer from '../Spacer';
 
 const SuperHeader = () => {
   return (
@@ -14,7 +15,9 @@ const SuperHeader = () => {
         Free shipping on domestic orders over $75!
       </MarketingMessage>
       <SearchInput />
+      {/* <Spacer size={24}/> */}
       <HelpLink href='/help'>Help</HelpLink>
+      {/* <Spacer size={24}/> */}
       <UnstyledButton>
         <Icon id='shopping-bag' strokeWidth={1} />
       </UnstyledButton>
@@ -27,7 +30,9 @@ const Wrapper = styled.div`
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
   display: flex;
-  padding: 12px 32px;
+  height: 40px;
+  align-items: center;
+  padding: 0px 32px;
   gap: 24px;
 `;
 
@@ -40,6 +45,8 @@ const HelpLink = styled.a`
   color: inherit;
   text-decoration: none;
   outline-offset: 2px;
+  /* margin-left: 24px;
+  margin-right: 24px; */
 
   &:not(:focus-visible) {
     outline: none;
